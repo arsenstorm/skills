@@ -35,3 +35,5 @@ The Agent Skills specification can be found at [agentskills.io/specification](ht
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<sub>Copyright © 2026 Arsen Shkrumelyak. All rights reserved.</sub>
