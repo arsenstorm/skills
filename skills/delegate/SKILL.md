@@ -35,6 +35,10 @@ Typical Opus work (agent must choose well): public API shapes, naming, user-faci
 ### 1. Plan first
 Read every file the change touches. Trace the flow end to end. Then write the plan: work items, each assignable to exactly one agent, with dependencies stated. Solve any hard-logic items yourself now and embed the solution in the relevant spec.
 
+**Partition by file ownership.** No two work items touch the same file. Two items that need the same file get merged into one item or serialized — redraw the boundaries until ownership is clean, because file ownership is what makes parallel dispatch safe.
+
+**Dependencies do not force sequencing.** If item B consumes item A's interface, decide that interface now and write the identical contract — exact signatures, types, names — into both specs. Both agents build against the contract in parallel; neither waits for the other's code to exist. Agents never talk to each other or read each other's in-progress work: every contract routes through you, because two agents negotiating a boundary produces a design decision you never reviewed.
+
 ### 2. Spec fully
 An agent must never make a design decision — every choice you leave open is one you won't see until review, and unreviewed choices are exactly where drift enters. Each spec includes:
 - **Files** — exact paths to create/modify
@@ -45,7 +49,7 @@ An agent must never make a design decision — every choice you leave open is on
 - **Report back** — instruct the agent to end with a list of files changed and any spec ambiguity it hit (it must flag ambiguity, not resolve it)
 
 ### 3. Dispatch
-Use the Agent tool with `model: "opus"` or `model: "sonnet"` per the split above. Independent items dispatch in parallel in one message. Items that would edit the same files either serialize or get `isolation: "worktree"`. Record each agent's ID/name — you will need it for fixes.
+Use the Agent tool with `model: "opus"` or `model: "sonnet"` per the split above. Dispatch every unblocked item in parallel in one message. If a clean partition was impossible and two items must share a file, serialize them or give each `isolation: "worktree"` — and when worktrees are used, you do the merge and resolve conflicts yourself; an agent merging another agent's work is a review that never happened. Record each agent's ID/name — you will need it for fixes.
 
 ### 4. Review yourself
 When an agent reports done, read its actual diff (`git diff` / the changed files) — never trust the agent's summary as the review. The summary reports what the agent *intended*; the diff is what it *did*, so read the diff, not the summary. Check:
@@ -53,6 +57,7 @@ When an agent reports done, read its actual diff (`git diff` / the changed files
 - Correctness: edge cases, error paths, the hard-logic transcription
 - Fit: matches surrounding code's style, reuses existing helpers, no invented abstractions, no unrequested dependencies
 - Scope: nothing changed outside the spec
+- Seams (parallel work): read the boundary where one agent's code calls another's. Each agent verified only its own files against its own spec, so contract drift between two individually-passing diffs surfaces only here
 
 ### 5. Fixes go back to the same agent
 Findings become a fix list: file, line, what's wrong, what correct looks like. Send it via **SendMessage to the same agent** — it has the context; a fresh agent re-reads everything and re-introduces drift. Do not fix the code yourself, with two exceptions: a trivial one-liner caught in review, or an agent that has failed the same fix twice (take over, note that you did).

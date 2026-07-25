@@ -9,7 +9,7 @@ A PRD is only as good as the understanding behind it. You interview the user unt
 
 ## Interview first
 
-Do not write a line of the PRD until you can answer each of these in one concrete sentence. If an answer is vague, ask one question to sharpen it, then continue. Never fill a gap with your own assumption. An assumption written into a PRD is indistinguishable from a fact the user gave you, so it never gets challenged.
+Do not write a line of the PRD until you can answer each of these in one concrete sentence. Ask at most two questions per message — a five-question wall gets skimmed and answered shallowly; short rounds get real answers. If an answer is vague, ask one question to sharpen it, then continue. Never fill a gap with your own assumption. An assumption written into a PRD is indistinguishable from a fact the user gave you, so it never gets challenged.
 
 1. **Problem** — what goes wrong today, in the user's words?
 2. **Who and how often** — who hits this, and how frequently? Frequency separates a papercut from a fire and decides how much the fix is worth.
@@ -21,7 +21,7 @@ Users pitch solutions, not problems ("add a retry button"). When you hear a solu
 
 ## The PRD
 
-Five sections, in this order. Nothing else — a PRD is not a design doc or an implementation plan. Adding those invites the reader to argue about solutions before the problem is agreed.
+Write it to `prd.md` in the working directory, or a path the user names. Five sections, in this order. Nothing else — a PRD is not a design doc or an implementation plan. Adding those invites the reader to argue about solutions before the problem is agreed.
 
 ### Problem
 What is broken, who feels it, and the evidence it is real (a number, a quote, a support thread). No proposed solution here.

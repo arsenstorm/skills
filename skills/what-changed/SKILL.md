@@ -19,7 +19,7 @@ If you already made the change and have no before shot, write "before not captur
 
 ## Each entry
 
-One entry per meaningful change. Every entry has three parts:
+One entry per meaningful change, ordered by impact with the most significant first — the reader may stop after the first entry, so make it the one that matters. Every entry has three parts:
 
 - **Title** — the change in a few words.
 - **Why** — the reasoning: why this approach and not the obvious alternative. This is the entire point of the report. An entry that states only *what* changed duplicates the diff and earns nothing.
