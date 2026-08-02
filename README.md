@@ -24,6 +24,7 @@ npx skills add arsenstorm/skills
 
 | Skill | Description | Link |
 |-------|-------------|------|
+| commit | Writes commit messages and PRs in one strict convention: single-line conventional subjects (type(scope): message, no body or footers) and short typed PR descriptions. | [skills/commit/SKILL.md](skills/commit/SKILL.md) |
 | delegate | Plans, solves the hard logic, and reviews every diff, then delegates production code to Opus/Sonnet subagents against a full spec. | [skills/delegate/SKILL.md](skills/delegate/SKILL.md) |
 | prd | Interviews the user, then writes a Product Requirements Document: problem, goals, non-goals, testable requirements, and success criteria (with a proxy + owner for metrics the agent can't verify). | [skills/prd/SKILL.md](skills/prd/SKILL.md) |
 | what-changed | After finishing work, writes a self-contained HTML before/after report: each change with its reasoning, cropped screenshots for visual changes, from a fixed template. | [skills/what-changed/SKILL.md](skills/what-changed/SKILL.md) |
