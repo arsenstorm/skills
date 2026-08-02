@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Write git commit messages and pull requests in one strict convention: a one-line message (type(scope): message, no body, no footers) and a short typed PR description. Use whenever committing, amending, rewording, writing a commit message, opening a pull request, or writing a PR title or description. Triggers on: commit, commit message, git commit, amend, PR, pull request, PR description, PR title, open a PR.
+description: "Write git commit messages and pull requests in one strict convention: a one-line message (type(scope): message, no body, no footers) and a short typed PR description. Use whenever committing, amending, rewording, writing a commit message, opening a pull request, or writing a PR title or description. Triggers on: commit, commit message, git commit, amend, PR, pull request, PR description, PR title, open a PR."
 ---
 
 # Commit
