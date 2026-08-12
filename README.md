@@ -28,6 +28,7 @@ npx skills add arsenstorm/skills
 | decomplexify | Audits code in any language against numeric complexity limits (nesting depth, function length, parameters, duplication), then refactors in a fixed order: delete, flatten, name, extract, split. | [skills/decomplexify/SKILL.md](skills/decomplexify/SKILL.md) |
 | delegate | Plans, solves the hard logic, and reviews every diff, then delegates production code to Opus/Sonnet subagents against a full spec. | [skills/delegate/SKILL.md](skills/delegate/SKILL.md) |
 | prd | Interviews the user, then writes a Product Requirements Document: problem, goals, non-goals, testable requirements, and success criteria (with a proxy + owner for metrics the agent can't verify). | [skills/prd/SKILL.md](skills/prd/SKILL.md) |
+| ship | Gets finished work live in one supervised chain: commit, push, watch CI to green, correct failures, and prove the result with the strongest evidence available. | [skills/ship/SKILL.md](skills/ship/SKILL.md) |
 | what-changed | After finishing work, writes a self-contained HTML before/after report: each change with its reasoning, cropped screenshots for visual changes, from a fixed template. | [skills/what-changed/SKILL.md](skills/what-changed/SKILL.md) |
 
 ## Specification
