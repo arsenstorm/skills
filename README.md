@@ -29,6 +29,7 @@ npx skills add arsenstorm/skills
 | delegate | Plans, solves the hard logic, and reviews every diff, then delegates production code to Opus/Sonnet subagents against a full spec. | [skills/delegate/SKILL.md](skills/delegate/SKILL.md) |
 | prd | Interviews the user, then writes a Product Requirements Document: problem, goals, non-goals, testable requirements, and success criteria (with a proxy + owner for metrics the agent can't verify). | [skills/prd/SKILL.md](skills/prd/SKILL.md) |
 | ship | Gets finished work live in one supervised chain: commit, push, watch CI to green, correct failures, and prove the result with the strongest evidence available. | [skills/ship/SKILL.md](skills/ship/SKILL.md) |
+| triage | Works through a repo's inbox breadth-first — open PRs, Dependabot, code-scanning, and secret-scanning alerts — giving every item one verdict (merge, fix, dismiss, ask) before acting on any. | [skills/triage/SKILL.md](skills/triage/SKILL.md) |
 | what-changed | After finishing work, writes a self-contained HTML before/after report: each change with its reasoning, cropped screenshots for visual changes, from a fixed template. | [skills/what-changed/SKILL.md](skills/what-changed/SKILL.md) |
 | where-are-we | Rebuilds project state from evidence (working tree, branches, PRs, CI, tasks, deploys) in a fixed read-only sweep, then reports done, in flight, and one next action. | [skills/where-are-we/SKILL.md](skills/where-are-we/SKILL.md) |
 
