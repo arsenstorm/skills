@@ -25,6 +25,7 @@ npx skills add arsenstorm/skills
 | Skill | Description | Link |
 |-------|-------------|------|
 | commit | Writes commit messages and PRs in one strict convention: single-line conventional subjects (type(scope): message, no body or footers) and short typed PR descriptions. | [skills/commit/SKILL.md](skills/commit/SKILL.md) |
+| comments | Decides for each code comment whether to add, keep, or delete it: a comment states a why the code cannot state, directives and markers carry a reason or an owner, commented-out code and narration are deleted. | [skills/comments/SKILL.md](skills/comments/SKILL.md) |
 | decomplexify | Audits code in any language against numeric complexity limits (nesting depth, function length, parameters, duplication), then refactors in a fixed order: delete, flatten, name, extract, split. | [skills/decomplexify/SKILL.md](skills/decomplexify/SKILL.md) |
 | delegate | Plans, solves the hard logic, and reviews every diff, then delegates production code to Opus/Sonnet subagents against a full spec. | [skills/delegate/SKILL.md](skills/delegate/SKILL.md) |
 | prd | Interviews the user, then writes a Product Requirements Document: problem, goals, non-goals, testable requirements, and success criteria (with a proxy + owner for metrics the agent can't verify). | [skills/prd/SKILL.md](skills/prd/SKILL.md) |
